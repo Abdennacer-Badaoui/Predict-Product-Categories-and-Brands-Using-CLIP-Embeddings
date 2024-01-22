@@ -13,10 +13,11 @@ Even if partners provide product data with predefined categories and brands, it 
 The classification model used is a fully connected neural network with a softmax layer, layer normalization after each linear transformation, and the tanh activation function.
 
 |                          | Category model                                     | Brand model                  |
-| :-----------             |:--------------:                                    | :-------------:               |
+| :-----------             |:--------------:                                    | :-------------:              |
 | Textual features         | Title, Description, Brand, Cat1, Cat2, Cat3        | Title, Description, Brand    |
 | Visual Features          | Product Image                                      | Product Image                |
 | Finetuning               | Yes                                                | No                           |
 | Output classes           | 3215                                               | 7978                         |
 
 The category model was fine-tuned on a more specific dataset for business reasons.
+Note that we use the categories and brands given in the data to predict the universal category and the universal brand.
